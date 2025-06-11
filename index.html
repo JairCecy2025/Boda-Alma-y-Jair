@@ -8,16 +8,13 @@ html_mejorado = """
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boda Alma & Jair</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      background-image: url('https://i.imgur.com/VPHyV2d.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      color: #2d2d2d;
+      fbody {
+  background-image: url('fondo-charro.jpg');
+  background-size: cover;
+  background-attachment: fixed;
     }
     header {
       background-color: rgba(255, 255, 255, 0.85);
@@ -25,11 +22,9 @@ html_mejorado = """
       text-align: center;
       border-bottom: 3px solid #d1c78f;
     }
-    header h1, header h2 {
-      font-family: 'Great Vibes', cursive;
-      margin: 0.3rem;
-      color: #486f45;
-    }
+    h1, h2 {
+  font-family: 'Great Vibes', cursive;
+}
     section {
       background-color: rgba(255,255,255,0.92);
       padding: 2rem;
@@ -89,6 +84,8 @@ html_mejorado = """
 </head>
 <body>
   <audio autoplay loop hidden>
+  <source src="tu_archivo.mp3" type="audio/mpeg">
+</audio>
     <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Miguel_Ramos/Mariachi_Melodies/Miguel_Ramos_-_01_-_Mariachi_Intro.mp3" type="audio/mpeg">
   </audio>
 
@@ -105,7 +102,10 @@ html_mejorado = """
       <strong>Esthela Romo Ballin</strong> & <strong>Cecilio Hernández Ramírez</strong><br>
       <strong>María Marta Esparza Ruvalcaba</strong> & <strong>Ramiro Flores Muñoz</strong>
     </p>
-
+    <div id="contador"></div>
+<script>
+  // JavaScript para mostrar días restantes
+</script>
     <div class="fecha"><strong>23 de agosto de 2025</strong></div>
 
     <div class="evento">
