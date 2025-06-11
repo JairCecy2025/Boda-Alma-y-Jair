@@ -1,60 +1,58 @@
+# Volvemos a crear el archivo HTML mejorado después del reinicio
+file_path = "/mnt/data/index_mejorado.html"
 
+html_mejorado = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boda Alma & Jair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fffdf6;
-      color: #2d2d2d;
+      font-family: 'Playfair Display', serif;
       margin: 0;
-      padding: 0;
+      background-image: url('https://i.imgur.com/VPHyV2d.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #2d2d2d;
     }
     header {
-      background-color: #f4f1e3;
+      background-color: rgba(255, 255, 255, 0.85);
       padding: 2rem;
       text-align: center;
       border-bottom: 3px solid #d1c78f;
     }
-    header h1 {
+    header h1, header h2 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
+      margin: 0.3rem;
       color: #486f45;
-      margin: 0;
-    }
-    header h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.5rem;
-      color: #9a882b;
-      margin: 0.3rem 0 0;
     }
     section {
+      background-color: rgba(255,255,255,0.92);
       padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
+      max-width: 850px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
     .fecha {
       text-align: center;
       font-size: 1.5rem;
-      margin: 1rem 0;
-      color: #486f45;
-    }
-    .evento {
-      margin-bottom: 2rem;
+      margin: 1.5rem 0;
+      color: #9a882b;
     }
     .evento h3 {
-      color: #9a882b;
       font-size: 1.2rem;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.4rem;
+      color: #9a882b;
     }
     .evento p {
-      margin: 0;
+      margin: 0.2rem 0;
     }
-    .qr {
+    .qr, .contador {
       text-align: center;
       margin-top: 2rem;
     }
@@ -64,38 +62,60 @@
       border: none;
       border-radius: 10px;
     }
+    .frase {
+      text-align: center;
+      font-style: italic;
+      margin: 2rem 0 1rem;
+      color: #486f45;
+    }
     footer {
-      background-color: #f4f1e3;
-      padding: 1rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.7);
+      color: #444;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #25d366;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <audio autoplay loop hidden>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Miguel_Ramos/Mariachi_Melodies/Miguel_Ramos_-_01_-_Mariachi_Intro.mp3" type="audio/mpeg">
+  </audio>
+
   <header>
     <h1>Alma Cecilia</h1>
     <h2>& Jair Sinaí</h2>
     <p>¡Nos casamos!</p>
   </header>
+
   <section>
     <p><em>Señor, enséñanos a progresar el uno por medio del otro bajo tu mirada; a cumplir tu voluntad todos los días de nuestra vida; a someterte nuestros proyectos; a pedir ayuda; a ofrecerte nuestras alegrías y nuestras penas; y principalmente, a guiarnos hacia ti a nuestros hijos. Amén.</em></p>
+
     <p>Con la bendición de nuestros padres:<br>
       <strong>Esthela Romo Ballin</strong> & <strong>Cecilio Hernández Ramírez</strong><br>
       <strong>María Marta Esparza Ruvalcaba</strong> & <strong>Ramiro Flores Muñoz</strong>
     </p>
-    <div class="fecha">
-      <strong>23 de agosto de 2025</strong>
-    </div>
+
+    <div class="fecha"><strong>23 de agosto de 2025</strong></div>
+
     <div class="evento">
       <h3>Ceremonia Religiosa</h3>
-      <p>Parroquia de la Purísima Concepción</p>
-      <p>5:00 p.m.</p>
+      <p>Parroquia de la Purísima Concepción - 5:00 p.m.</p>
       <div class="mapa">
         <iframe src="https://www.google.com/maps?q=Parroquia+de+la+Pur%C3%ADsima+Concepci%C3%B3n&output=embed"></iframe>
       </div>
     </div>
+
     <div class="evento">
       <h3>Recepción</h3>
       <p>Hacienda Triana</p>
@@ -103,25 +123,61 @@
         <iframe src="https://www.google.com/maps?q=Hacienda+Triana&output=embed"></iframe>
       </div>
     </div>
+
     <div class="evento">
       <h3>Código de vestimenta</h3>
       <p>Formal libre, opcional charra</p>
     </div>
+
     <div class="evento">
       <h3>Regalos</h3>
       <p>Lo más importante es tu presencia</p>
     </div>
+
     <div class="evento">
       <h3>Confirmación de asistencia</h3>
       <p>📱 449 896 0516 / 474 149 2782</p>
+      <a class="btn-whatsapp" href="https://wa.me/524498960516?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Alma%20y%20Jair" target="_blank">Confirmar por WhatsApp</a>
     </div>
+
     <div class="qr">
-      <img src="qr_cecyjair2025.png" alt="Confirma tu asistencia escaneando este código" width="150" />
-      <p><a href="https://cecyjair2025.github.io/alma-y-jair">Confirmar asistencia</a></p>
+      <img src="qr_cecyjair2025.png" alt="Escanea para abrir invitación" width="150" />
+      <p><a href="https://jaircecy2025.github.io/Boda-Alma-y-Jair/">Ver invitación web</a></p>
+    </div>
+
+    <div class="contador" id="contador"></div>
+
+    <div class="frase">
+      “Nos sentimos bendecidos de compartir este día tan especial contigo. ¡Gracias por acompañarnos!”
     </div>
   </section>
+
   <footer>
     © 2025 Alma & Jair. Todos los derechos reservados.
   </footer>
+
+  <script>
+    const fechaBoda = new Date('2025-08-23T17:00:00');
+    const elContador = document.getElementById('contador');
+    function actualizarContador() {
+      const ahora = new Date();
+      const diferencia = fechaBoda - ahora;
+      if (diferencia <= 0) {
+        elContador.innerHTML = '¡Ya comenzó la boda!';
+        return;
+      }
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      elContador.innerHTML = `Faltan ${dias} días para nuestra boda`;
+    }
+    setInterval(actualizarContador, 1000 * 60 * 60);
+    actualizarContador();
+  </script>
 </body>
 </html>
+"""
+
+# Guardar
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(html_mejorado)
+
+file_path
