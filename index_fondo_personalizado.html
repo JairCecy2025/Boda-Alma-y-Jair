@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boda Alma & Jair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Italianno&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: url('fondo-boda.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Cormorant Garamond', serif;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin: 0;
+    }
+    header h2 {
+      font-family: 'Italianno', cursive;
+      font-size: 3rem;
+      margin: 0.2rem 0 1rem;
+    }
+    section {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 850px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    h3 {
+      color: #ffe484;
+      margin-top: 1.5rem;
+    }
+    .fecha {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 1rem 0;
+      color: #fff4c2;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      border: none;
+      margin-top: 0.5rem;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      background-color: #25d366;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .qr, .contador {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .frase {
+      font-style: italic;
+      text-align: center;
+      margin-top: 2rem;
+      color: #fffbd7;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Miguel_Ramos/Mariachi_Melodies/Miguel_Ramos_-_01_-_Mariachi_Intro.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <h1>Alma Cecilia</h1>
+    <h2>& Jair Sinaí</h2>
+    <p>¡Nos casamos!</p>
+  </header>
+
+  <section>
+    <p><em>Señor, enséñanos a progresar el uno por medio del otro bajo tu mirada; a cumplir tu voluntad todos los días de nuestra vida; a someterte nuestros proyectos; a pedir ayuda; a ofrecerte nuestras alegrías y nuestras penas; y principalmente, a guiarnos hacia ti a nuestros hijos. Amén.</em></p>
+
+    <p>Con la bendición de nuestros padres:<br>
+      <strong>Esthela Romo Ballin</strong> & <strong>Cecilio Hernández Ramírez</strong><br>
+      <strong>María Marta Esparza Ruvalcaba</strong> & <strong>Ramiro Flores Muñoz</strong>
+    </p>
+
+    <div class="fecha">23 de agosto de 2025</div>
+
+    <h3>Ceremonia Religiosa</h3>
+    <p>Parroquia de la Purísima Concepción - 5:00 p.m.</p>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Parroquia+de+la+Pur%C3%ADsima+Concepci%C3%B3n&output=embed"></iframe>
+    </div>
+
+    <h3>Recepción</h3>
+    <p>Hacienda Triana</p>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Hacienda+Triana&output=embed"></iframe>
+    </div>
+
+    <h3>Código de vestimenta</h3>
+    <p>Formal libre, opcional charra</p>
+
+    <h3>Regalos</h3>
+    <p>Lo más importante es tu presencia</p>
+
+    <h3>Confirmación de asistencia</h3>
+    <p>📱 449 896 0516 / 474 149 2782</p>
+    <a class="btn-whatsapp" href="https://wa.me/524498960516?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Alma%20y%20Jair" target="_blank">Confirmar por WhatsApp</a>
+
+    <div class="qr">
+      <img src="qr_cecyjair2025.png" alt="Escanea para abrir invitación" width="150" />
+      <p><a href="https://jaircecy2025.github.io/Boda-Alma-y-Jair/">Ver invitación web</a></p>
+    </div>
+
+    <div class="contador" id="contador"></div>
+
+    <div class="frase">“Nos sentimos bendecidos de compartir este día tan especial contigo. ¡Gracias por acompañarnos!”</div>
+  </section>
+
+  <footer>
+    © 2025 Alma & Jair. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const fechaBoda = new Date('2025-08-23T17:00:00');
+    const elContador = document.getElementById('contador');
+    function actualizarContador() {
+      const ahora = new Date();
+      const diferencia = fechaBoda - ahora;
+      if (diferencia <= 0) {
+        elContador.innerHTML = '¡Ya comenzó la boda!';
+        return;
+      }
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      elContador.innerHTML = `Faltan ${dias} días para nuestra boda`;
+    }
+    setInterval(actualizarContador, 1000 * 60 * 60);
+    actualizarContador();
+  </script>
+</body>
+</html>
