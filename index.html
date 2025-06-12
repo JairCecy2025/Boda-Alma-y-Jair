@@ -1,86 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boda Alma & Jair</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       margin: 0;
-      background-image: url('https://i.imgur.com/VPHyV2d.jpg');
+      background-image: url('fondo-boda.jpg');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
-      color: #2d2d2d;
+      color: #3a3a3a;
+      line-height: 1.6;
     }
     header {
       background-color: rgba(255, 255, 255, 0.85);
-      padding: 2rem;
+      padding: 2.5rem;
       text-align: center;
-      border-bottom: 3px solid #d1c78f;
+      border-bottom: 2px solid #d1c78f;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    header h1, header h2 {
+    header h1 {
+      font-family: 'Italianno', cursive;
+      font-size: 4.5rem;
+      margin: 0;
+      color: #5a7247;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    header h2 {
       font-family: 'Great Vibes', cursive;
-      margin: 0.3rem;
-      color: #486f45;
+      font-size: 3rem;
+      margin: 0.5rem 0 0;
+      color: #9a882b;
+    }
+    header p {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      margin: 0.5rem 0 0;
+      color: #7a6a2b;
     }
     section {
       background-color: rgba(255,255,255,0.92);
-      padding: 2rem;
-      max-width: 850px;
+      padding: 2.5rem;
+      max-width: 800px;
       margin: 2rem auto;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      border: 1px solid rgba(210, 180, 140, 0.3);
     }
     .fecha {
       text-align: center;
-      font-size: 1.5rem;
-      margin: 1.5rem 0;
-      color: #9a882b;
+      font-size: 1.8rem;
+      margin: 2rem 0;
+      color: #7a6a2b;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
     .evento h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-      color: #9a882b;
+      font-family: 'Italianno', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #5a7247;
     }
     .evento p {
-      margin: 0.2rem 0;
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
     }
     .qr, .contador {
       text-align: center;
-      margin-top: 2rem;
+      margin: 2.5rem 0;
     }
     .mapa iframe {
       width: 100%;
       height: 300px;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .frase {
       text-align: center;
       font-style: italic;
-      margin: 2rem 0 1rem;
-      color: #486f45;
+      margin: 2.5rem 0;
+      color: #5a7247;
+      font-size: 1.4rem;
+      font-family: 'Italianno', cursive;
     }
     footer {
       text-align: center;
       font-size: 0.9rem;
-      padding: 1rem;
+      padding: 1.5rem;
       background-color: rgba(255,255,255,0.7);
-      color: #444;
+      color: #555;
+      margin-top: 2rem;
     }
     .btn-whatsapp {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
       background-color: #25d366;
       color: white;
-      border-radius: 25px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .btn-whatsapp:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+    }
+    em {
+      font-style: italic;
+      color: #555;
     }
   </style>
 </head>
@@ -109,8 +146,10 @@
       <h3>Ceremonia Religiosa</h3>
       <p>Parroquia de la Purísima Concepción - 5:00 p.m.</p>
       <div class="mapa">
-        <iframe src="https://www.google.com/maps/place/Templo+de+la+Pur%C3%ADsima+Concepci%C3%B3n/@21.8825784,-102.2863386,17z/data=!3m1!4b1!4m6!3m5!1s0x8429ee71fb5f5b9d:0xa085502c79514755!8m2!3d21.8825734!4d-102.2837637!16s%2Fg%2F11c5wlrsz9?authuser=0&entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D      </div>
+        <iframe src="https://www.google.com/maps?q=Parroquia+de+la+Pur%C3%ADsima+Concepci%C3%B3n&output=embed"></iframe>
+      </div>
     </div>
+
     <div class="evento">
       <h3>Recepción</h3>
       <p>Hacienda Triana</p>
@@ -137,7 +176,7 @@
 
     <div class="qr">
       <img src="qr_cecyjair2025.png" alt="Escanea para abrir invitación" width="150" />
-      <p><a href="https://jaircecy2025.github.io/Boda-Alma-y-Jair/">Ver invitación web</a></p>
+      <p><a href="https://jaircecy2025.github.io/Boda-Alma-y-Jair/" style="color: #5a7247; text-decoration: none; font-size: 1.1rem;">Ver invitación web</a></p>
     </div>
 
     <div class="contador" id="contador"></div>
@@ -158,11 +197,11 @@
       const ahora = new Date();
       const diferencia = fechaBoda - ahora;
       if (diferencia <= 0) {
-        elContador.innerHTML = '¡Ya comenzó la boda!';
+        elContador.innerHTML = '<h3 style="font-family: \'Great Vibes\', cursive; color: #9a882b;">¡Hoy es nuestro gran día!</h3>';
         return;
       }
       const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-      elContador.innerHTML = `Faltan ${dias} días para nuestra boda`;
+      elContador.innerHTML = `<h3 style="font-family: 'Italianno', cursive; color: #5a7247; font-size: 2rem;">Faltan ${dias} días para nuestra boda</h3>`;
     }
     setInterval(actualizarContador, 1000 * 60 * 60);
     actualizarContador();
